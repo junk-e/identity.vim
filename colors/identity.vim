@@ -16,11 +16,11 @@ highlight clear
 "-------------------------------------------------------------------------------
 let s:vmode  = "gui"
 let s:base01 = "#000F13" " Background color
-let s:base02 = "#001C22" " Sub-background
-let s:base03 = "#00404D" " Comment-color
-let s:base04 = "#002830" " NonText
-let s:base05 = "#004653"
-let s:blu00  = "#00ADD0"
+let s:base02 = "#001E24" " Sub-background
+let s:base03 = "#002C35" " NonText
+let s:base04 = "#003B47" " Comment-color
+let s:base05 = "#004958" " ????
+let s:blu00  = "#00ADD0" " Base color
 let s:wht00  = "#6BE6FF"
 let s:wht01  = "#95ECFF"
 let s:red00  = "#D02300"
@@ -46,7 +46,7 @@ endfunction
 "|         | GROUP NAME             | FORMAT    | FGCOLOR | BGCOLOR |
 "+---------+------------------------+-----------+---------+---------+
 exe Def_hi( "Normal",                s:fmt_none, s:blu00,  s:base01)
-exe Def_hi( "Comment",               s:fmt_none, s:base03, s:none  )
+exe Def_hi( "Comment",               s:fmt_none, s:base04, s:none  )
 exe Def_hi( "Constant",              s:fmt_none, s:blu00,  s:none  )
 exe Def_hi( "Identifier",            s:fmt_none, s:red01,  s:none  )
 exe Def_hi( "Statement",             s:fmt_none, s:wht00,  s:none  )
@@ -66,18 +66,18 @@ exe Def_hi( "Todo",                  s:fmt_none, s:yel00,  s:base02)
 "+---------+------------------------+-----------+---------+---------+
 "|         | GROUP NAME             | FORMAT    | FGCOLOR | BGCOLOR |
 "+---------+------------------------+-----------+---------+---------+
-exe Def_hi( "NonText",               s:fmt_none, s:base04, s:base01)
-exe Def_hi( "FoldColumn",            s:fmt_none, s:base03, s:base02)
-exe Def_hi( "LineNr",                s:fmt_none, s:base03, s:base02)
-exe Def_hi( "CursorLineNr",          s:fmt_none, s:base03, s:base02)
+exe Def_hi( "NonText",               s:fmt_none, s:base03, s:base01)
+exe Def_hi( "FoldColumn",            s:fmt_none, s:base04, s:base02)
+exe Def_hi( "LineNr",                s:fmt_none, s:base04, s:base02)
+exe Def_hi( "CursorLineNr",          s:fmt_none, s:base04, s:base02)
 exe Def_hi( "ColorColumn",           s:fmt_reve, s:base01, s:red00 )
 " NOTE: The background changes according to the text color (for discomfort)
-exe Def_hi( "Folded",                s:fmt_none, s:base03, s:base02)
+exe Def_hi( "Folded",                s:fmt_none, s:base04, s:base02)
 
 " Popup color
-exe Def_hi( "Pmenu",                 s:fmt_none, s:base03, s:blu00 )
-exe Def_hi( "PmenuSel",              s:fmt_none, s:base03, s:wht00 )
-exe Def_hi( "PmenuSbar",             s:fmt_none, s:none,   s:base03)
+exe Def_hi( "Pmenu",                 s:fmt_none, s:base04, s:blu00 )
+exe Def_hi( "PmenuSel",              s:fmt_none, s:base04, s:wht00 )
+exe Def_hi( "PmenuSbar",             s:fmt_none, s:none,   s:base04)
 exe Def_hi( "PmenuThumb",            s:fmt_none, s:none,   s:wht00 )
 "}}}
 
@@ -88,7 +88,7 @@ exe Def_hi( "PmenuThumb",            s:fmt_none, s:none,   s:wht00 )
 exe Def_hi( "StatusLine",            s:fmt_none, s:none,   s:none  )
 exe Def_hi( "StatusLineNC",          s:fmt_none, s:none,   s:none  )
 
-exe Def_hi( "SpecialKey",            s:fmt_none, s:base04, s:none  )
+exe Def_hi( "SpecialKey",            s:fmt_none, s:base03, s:none  )
 exe Def_hi( "Visual",                s:fmt_none, s:base02, s:base05)
 exe Def_hi( "Directory",             s:fmt_none, s:none,   s:none  )
 exe Def_hi( "ErrorMsg",              s:fmt_none, s:red00,  s:none  )
@@ -102,5 +102,5 @@ exe Def_hi( "Search",                s:fmt_none, s:none,   s:none  )
 " Plugins (not recommended) "{{{
 "-------------------------------------------------------------------------------
 " indentLine
-let g:indentLine_color_gui = s:base04
+let g:indentLine_color_gui = s:base03
 "}}}
